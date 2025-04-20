@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 public class NavigationThroughCourseDetails extends BaseDriverParameter {
     ReUsableMethods usableMethods=new ReUsableMethods();
 
-    @Test(priority = 1)
+    @Test(priority = 1,groups = {"Regression"})
     @Parameters("BrowserType")
     public void courseDetails(){
         CourseDetails_POM courseDetails=new CourseDetails_POM();

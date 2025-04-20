@@ -15,6 +15,7 @@ public class ReUsableMethods extends BaseDriverParameter{
         element.click();
         wait.until(ExpectedConditions.visibilityOf(logoElement));
         Assert.assertTrue(logoElement.isDisplayed(),"Logo Bulundu");
+        wait.until(ExpectedConditions.elementToBeClickable(logoElement));
         logoElement.click();
     }
 }
