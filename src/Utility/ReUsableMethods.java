@@ -1,4 +1,4 @@
-package Utilty;
+package Utility;
 
 public class ReUsableMethods {
 }

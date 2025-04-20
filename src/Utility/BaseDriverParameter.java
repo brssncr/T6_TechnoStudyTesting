@@ -1,4 +1,4 @@
-package Utilty;
+package Utility;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
@@ -44,7 +44,7 @@ public class BaseDriverParameter {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-        action= new Actions(driver
+        action= new Actions(driver);
         LogTutma.info("Başlangıç değişkenleri driver,wait,log tanımlandı ve başlatıldı");
     }
 
