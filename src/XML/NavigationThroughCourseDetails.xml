@@ -14,4 +14,11 @@
             <class name="NavigationThroughCourseDetails"></class>
         </classes>
     </test>
+
+    <test name="FirefoxTests">
+        <parameter name="BrowserType" value="firefox"/>
+        <classes>
+            <class name="NavigationThroughCourseDetails"></class>
+        </classes>
+    </test>
 </suite>
