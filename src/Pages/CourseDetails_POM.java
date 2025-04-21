@@ -19,6 +19,6 @@ public class CourseDetails_POM extends BaseDriverParameter {
     @FindBy(css = "a[class='tn-atom'][href='https://techno.study/sdet-bootcamp']")
     public WebElement sdetButton;
 
-    @FindBy(css = "img[imgfield='img']")
+    @FindBy(css = "img[alt='TechnoStudy']")
     public WebElement technoStudyLogo;
 }
