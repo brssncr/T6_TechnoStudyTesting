@@ -10,13 +10,13 @@ public class CourseDetails_POM extends BaseDriverParameter {
         PageFactory.initElements(BaseDriverParameter.driver, this);
     }
 
-    @FindBy(css = "a[class='tn-atom'][href='https://techno.study/data-science-bootcamps']")
+    @FindBy(xpath = "//a[contains(@href,'data-science')][normalize-space()='Learn more']")
     public WebElement dataScienceButton;
 
-    @FindBy(css = "a[class='tn-atom'][href='https://techno.study/android-bootcamp']")
+    @FindBy(xpath = "//a[contains(@href,'android')][normalize-space()='Learn more']")
     public WebElement androidBootcampButton;
 
-    @FindBy(css = "a[class='tn-atom'][href='https://techno.study/sdet-bootcamp']")
+    @FindBy(xpath = "//a[contains(@href,'sdet-bootcamp')][normalize-space()='Learn more']")
     public WebElement sdetButton;
 
     @FindBy(css = "img[alt='TechnoStudy']")
