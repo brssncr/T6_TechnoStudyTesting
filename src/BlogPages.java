@@ -1,20 +1,28 @@
 import Utility.BaseDriverParameter;
-import Utility.MyFunc;
-import Utility.ReUsableMethods;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.Parameters;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class BlogPages extends BaseDriverParameter {
-    ReUsableMethods reusable = new ReUsableMethods();
 
-    @Test(priority = 1, groups = {"Regression"})
-    @Parameters("BrowserType")
-    public void blogTest(WebElement blogMenu, WebElement blogItem, String expectedUrlPart) {
-        driver.get("https://techno.study/");
-        MyFunc.wait(2);
+    @Test
+    public void blogTest() {
+        driver.get("https://techno.study/blog");
 
-        blogMenu.click();
-        MyFunc.wait(2);
+        WebElement codingLink = wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//a[text()='Coding']")));
+        codingLink.click();
+
+        WebElement articleLink = wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//a[contains(text(),'How to Become a Coder')]")));
+        articleLink.click();
+
+        WebElement articleTitle = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//h1[contains(.,'How to Become a Coder')]")));
+
+        Assert.assertTrue(articleTitle.getText().contains("How to Become a Coder"),
+                "Makale başlığı beklenen ifadeyi içermiyor!");
     }
 }
