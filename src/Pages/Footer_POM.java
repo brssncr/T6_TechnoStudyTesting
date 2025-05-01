@@ -1,20 +1,19 @@
 package Pages;
 
-import org.openqa.selenium.By;
+import Utility.BaseDriverParameter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class Footer_POM {
-    WebDriver driver;
+public class Footer_POM extends BaseDriverParameter {
 
     public Footer_POM(WebDriver driver) {
-        this.driver = driver;
+        PageFactory.initElements(BaseDriverParameter.driver, this);
     }
 
-    public List<WebElement> socialMediaIcons() {
-        WebElement footer = driver.findElement(By.tagName("footer"));
-        return footer.findElements(By.cssSelector("a[aria-label]"));
-    }
+    @FindBy(css = "footer a[aria-label]")
+    public List<WebElement> socialMediaIcons;
 }

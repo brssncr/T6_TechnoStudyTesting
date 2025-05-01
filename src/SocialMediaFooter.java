@@ -23,7 +23,7 @@ public class SocialMediaFooter extends BaseDriverParameter {
 
         MyFunc.wait(2);
 
-        List<WebElement> icons = footer.socialMediaIcons();
+        List<WebElement> icons = footer.socialMediaIcons;
         Assert.assertFalse(icons.isEmpty(), "Sosyal medya ikonları bulunamadı!");
 
         for (WebElement icon : icons) {

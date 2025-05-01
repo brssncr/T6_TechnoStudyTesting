@@ -1,25 +1,22 @@
 package Pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import Utility.BaseDriverParameter;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-public class BlogDetails_POM {
-    WebDriver driver;
+public class BlogDetails_POM extends BaseDriverParameter {
 
-    public BlogDetails_POM(WebDriver driver) {
-        this.driver = driver;
+    public BlogDetails_POM() {
+        PageFactory.initElements(BaseDriverParameter.driver, this);
     }
 
-    public WebElement blogsMenu() {
-        return driver.findElement(By.xpath("//a[contains(text(),'Blog')]"));
-    }
+    @FindBy(xpath = "//a[text()='Coding']")
+    public WebElement codingLink;
 
-    public WebElement blogArticle(int index) {
-        return driver.findElement(By.xpath("(//h2//a)[" + index + "]"));
-    }
+    @FindBy(xpath = "//a[contains(text(),'How to Become a Coder')]")
+    public WebElement articleLink;
 
-    public WebElement blogHeaderTitle() {
-        return driver.findElement(By.tagName("h1"));
-    }
+    @FindBy(xpath = "//h1[contains(.,'How to Become a Coder')]")
+    public WebElement articleTitle;
 }
