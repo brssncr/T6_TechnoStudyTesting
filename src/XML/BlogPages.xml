@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="BlogPage">
+    <test name="ChromeTests">
+        <parameter name="BrowserType" value="chrome"/>
+        <classes>
+            <class name="BlogPages"/>
+        </classes>
+    </test>
+
+    <test name="FirefoxTests">
+        <parameter name="BrowserType" value="firefox"/>
+        <classes>
+            <class name="BlogPages"/>
+        </classes>
+    </test>
+</suite>
