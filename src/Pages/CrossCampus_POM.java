@@ -1,4 +1,6 @@
 package Pages;
 
-public class CrossCampus_POM {
+import Utility.BaseDriverParameter;
+
+public class CrossCampus_POM extends BaseDriverParameter {
 }
