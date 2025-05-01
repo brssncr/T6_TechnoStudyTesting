@@ -5,12 +5,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class Booking extends BaseDriverParameter {
 
     @Test()
+    @Parameters("Browser Type")
     public void BookingTest() {
         Actions actions = new Actions(driver);
         driver.get("https://techno.study/");
