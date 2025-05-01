@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SocialMediaTests" >
+    <test name="ChromeTest">
+        <parameter name="BrowserType" value="chrome"/>
+        <classes>
+            <class name="SocialMediaFooter"/>
+        </classes>
+    </test>
+
+    <test name="FirefoxTest">
+        <parameter name="BrowserType" value="firefox"/>
+        <classes>
+            <class name="SocialMediaFooter"/>
+        </classes>
+    </test>
+
+</suite>
