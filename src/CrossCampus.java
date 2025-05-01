@@ -10,6 +10,9 @@ public class CrossCampus extends BaseDriverParameter {
     public void crossCampus() {
         CrossCampus_POM login = new CrossCampus_POM();
 
+        driver.get("https://techno.study/");
+
+
 
     }
 }
