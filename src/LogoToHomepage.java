@@ -1,5 +1,5 @@
-import Pages.LogoToHomepage_POM;
-import Utility.BaseDriverParameter;
+import pages.LogoToHomepage_POM;
+import utility.BaseDriverParameter;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;

@@ -1,13 +1,13 @@
-import Pages.CourseDetails_POM;
-import Utility.BaseDriverParameter;
-import Utility.ReUsableMethods;
+import pages.CourseDetails_POM;
+import utility.BaseDriverParameter;
+import utility.ReusableMethods;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class NavigationThroughCourseDetails extends BaseDriverParameter {
-    ReUsableMethods usableMethods=new ReUsableMethods();
+    ReusableMethods usableMethods=new ReusableMethods();
 
     @Test(priority = 1,groups = {"Regression"},dataProvider = "buttonsToClick")
     @Parameters("BrowserType")

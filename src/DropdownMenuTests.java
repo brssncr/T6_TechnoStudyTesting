@@ -1,5 +1,5 @@
-import Pages.DropdownMenu_POM;
-import Utility.BaseDriverParameter;
+import pages.DropdownMenu_POM;
+import utility.BaseDriverParameter;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;

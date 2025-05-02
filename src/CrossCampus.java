@@ -1,6 +1,5 @@
-import Pages.CrossCampus_POM;
-import Utility.BaseDriverParameter;
-import Utility.ReUsableMethods;
+import pages.CrossCampus_POM;
+import utility.BaseDriverParameter;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;

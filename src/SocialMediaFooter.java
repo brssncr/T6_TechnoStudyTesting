@@ -1,4 +1,4 @@
-import Pages.Footer_POM;
+import pages.Footer_POM;
 import Utility.BaseDriverParameter;
 import Utility.MyFunc;
 import org.openqa.selenium.WebElement;
