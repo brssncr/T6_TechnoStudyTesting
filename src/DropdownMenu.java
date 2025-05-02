@@ -4,14 +4,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class DropdownMenuTests extends BaseDriverParameter {
+public class DropdownMenu extends BaseDriverParameter {
 
     @Test
     public void herKursSayfasiAciliyorMu() {
         driver.get("https://techno.study");
         DropdownMenu_POM menu = new DropdownMenu_POM(driver);
 
-        // 1) Software Development Engineer in Test
         menu.hoverPrograms();
         wait.until(ExpectedConditions.visibilityOf(menu.sdetLink));
         String href1 = menu.sdetLink.getAttribute("href");
@@ -21,7 +20,6 @@ public class DropdownMenuTests extends BaseDriverParameter {
                 "URL beklendiği gibi değil: " + href1);
         menu.logo.click();
 
-        // 2) Data Science Bootcamp
         menu.hoverPrograms();
         wait.until(ExpectedConditions.visibilityOf(menu.dataScienceLink));
         String href2 = menu.dataScienceLink.getAttribute("href");
@@ -31,7 +29,6 @@ public class DropdownMenuTests extends BaseDriverParameter {
                 "URL beklendiği gibi değil: " + href2);
         menu.logo.click();
 
-        // 3) Artificial Intelligence
         menu.hoverPrograms();
         wait.until(ExpectedConditions.visibilityOf(menu.artificialLink));
         String href3 = menu.artificialLink.getAttribute("href");
@@ -41,7 +38,6 @@ public class DropdownMenuTests extends BaseDriverParameter {
                 "URL beklendiği gibi değil: " + href3);
         menu.logo.click();
 
-        // 4) Android Developer Bootcamp
         menu.hoverPrograms();
         wait.until(ExpectedConditions.visibilityOf(menu.androidLink));
         String href4 = menu.androidLink.getAttribute("href");
@@ -51,7 +47,6 @@ public class DropdownMenuTests extends BaseDriverParameter {
                 "URL beklendiği gibi değil: " + href4);
         menu.logo.click();
 
-        // 5) Master's Program
         menu.hoverPrograms();
         wait.until(ExpectedConditions.visibilityOf(menu.mastersLink));
         String href5 = menu.mastersLink.getAttribute("href");
