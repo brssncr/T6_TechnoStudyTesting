@@ -1,7 +1,6 @@
 import Pages.Footer_POM;
 import Utility.BaseDriverParameter;
 import Utility.MyFunc;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
@@ -17,9 +16,6 @@ public class SocialMediaFooter extends BaseDriverParameter {
         driver.get("https://techno.study/");
 
         Footer_POM footer = new Footer_POM(driver);
-
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
 
         MyFunc.wait(2);
 
@@ -43,11 +39,10 @@ public class SocialMediaFooter extends BaseDriverParameter {
             wait.until(driver -> !driver.getCurrentUrl().equals("about:blank"));
             String currentUrl = driver.getCurrentUrl().toLowerCase();
 
-            Assert.assertTrue(currentUrl.contains("linkedin") ||
+            Assert.assertTrue(currentUrl.contains("facebook") ||
                             currentUrl.contains("instagram") ||
-                            currentUrl.contains("facebook") ||
                             currentUrl.contains("youtube") ||
-                            currentUrl.contains("twitter"),
+                            currentUrl.contains("linkedin"),
                     "Sosyal medya URL'si beklenenden farklı: " + currentUrl);
 
             driver.close();
