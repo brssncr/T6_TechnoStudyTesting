@@ -13,4 +13,8 @@ public class CrossCampus_POM extends BaseDriverParameter {
     @FindBy(xpath = "//a[text()='SIGN IN']")
     public WebElement signInButton;
 
+    @FindBy(css = "div[id='login']")
+    public WebElement loginPanel;
+
+
 }
