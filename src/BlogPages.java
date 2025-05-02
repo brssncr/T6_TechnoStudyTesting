@@ -1,15 +1,17 @@
-import Utility.BaseDriverParameter;
+import utility.BaseDriverParameter;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
-import org.testng.annotations.Test;
+import utility.ConfigReader;
 
 public class BlogPages extends BaseDriverParameter {
 
     @Test
     public void blogTest() {
-        driver.get("https://techno.study/blog");
+        driver.get(ConfigReader.getProperty("URL"));
+        wait.until(ExpectedConditions.urlToBe(ConfigReader.getProperty("URL")));
 
         WebElement codingLink = wait.until(ExpectedConditions.elementToBeClickable(
                 By.xpath("//a[text()='Coding']")));
