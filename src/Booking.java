@@ -1,5 +1,3 @@
-package xml;
-
 import utility.BaseDriverParameter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
