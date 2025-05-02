@@ -4,7 +4,7 @@
     <parameter name="BrowserType" value="chrome"/>
     <test name="ProgramsDropdownTests">
         <classes>
-            <class name="DropdownMenuTests"/>
+            <class name="DropdownMenu"/>
         </classes>
     </test>
 </suite>
