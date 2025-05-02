@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="CrossCampusTests">
+
+    <test name="ChromeTest">
+        <parameter name="BrowserType" value="chrome"/>
+        <classes>
+            <class name="CrossCampus"/>
+        </classes>
+    </test>
+
+    <test name="EdgeTest">
+        <parameter name="BrowserType" value="edge"/>
+        <classes>
+            <class name="CrossCampus"/>
+        </classes>
+    </test>
+
+</suite>
