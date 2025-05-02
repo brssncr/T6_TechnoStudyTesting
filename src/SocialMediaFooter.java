@@ -1,11 +1,13 @@
 import pages.Footer_POM;
-import Utility.BaseDriverParameter;
-import Utility.MyFunc;
+import utility.BaseDriverParameter;
+import utility.ConfigReader;
+import utility.ReusableMethods;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.lang.module.Configuration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,11 +15,12 @@ public class SocialMediaFooter extends BaseDriverParameter {
 
     @Test
     public void socialMediaIconsTest() {
-        driver.get("https://techno.study/");
+        driver.get (ConfigReader.getProperty("URL"));
+        wait.until(ExpectedConditions.urlToBe(ConfigReader.getProperty("URL")));
 
         Footer_POM footer = new Footer_POM(driver);
 
-        MyFunc.wait(2);
+        ReusableMethods.wait(2);
 
         List<WebElement> icons = footer.socialMediaIcons;
         Assert.assertFalse(icons.isEmpty(), "Sosyal medya ikonları bulunamadı!");
@@ -47,7 +50,7 @@ public class SocialMediaFooter extends BaseDriverParameter {
 
             driver.close();
             driver.switchTo().window(originalTab);
-            MyFunc.wait(1);
+            ReusableMethods.wait(1);
         }
     }
 }
