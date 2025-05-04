@@ -3,12 +3,13 @@ import utility.BaseDriverParameter;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utility.ConfigReader;
 
 public class DropdownMenu extends BaseDriverParameter {
 
     @Test
-    public void herKursSayfasiAciliyorMu() {
-        driver.get("https://techno.study");
+    public void programsDropdown() {
+        driver.get (ConfigReader.getProperty("URL"));
         DropdownMenu_POM menu = new DropdownMenu_POM(driver);
 
         menu.hoverPrograms();
