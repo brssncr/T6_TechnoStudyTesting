@@ -7,7 +7,6 @@ import org.testng.Assert;
 import utility.ConfigReader;
 
 public class BlogPages extends BaseDriverParameter {
-
     @Test
     public void blogTest() {
         driver.get(ConfigReader.getProperty("URL"));

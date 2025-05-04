@@ -7,12 +7,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.lang.module.Configuration;
 import java.util.ArrayList;
 import java.util.List;
 
 public class SocialMediaFooter extends BaseDriverParameter {
-
     @Test
     public void socialMediaIconsTest() {
         driver.get (ConfigReader.getProperty("URL"));
